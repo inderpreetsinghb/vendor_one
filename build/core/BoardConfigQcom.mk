@@ -11,6 +11,7 @@ UM_4_9_FAMILY := sdm845
 UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY)
 
 BOARD_USES_ADRENO := true
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.one
 
 # UM platforms no longer need this set on O+
 ifneq ($(call is-board-platform-in-list, $(UM_PLATFORMS)),true)
