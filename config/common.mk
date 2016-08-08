@@ -53,6 +53,13 @@ PRODUCT_PACKAGES += \
     messaging \
     LiveWallpapersPicker
 
+# Custom off-mode charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    one_charger_res_images \
+    font_log.png \
+    libhealthd.one
+
 # Build sound recorder
 PRODUCT_PACKAGES += SoundRecorder
 
