@@ -14,6 +14,13 @@ PRODUCT_PACKAGES += \
     font_log.png \
     libhealthd.one
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
+    android.hidl.base@1.0.vendor \
+    android.hidl.manager@1.0.vendor
+
 ifneq ($(HOST_OS),linux)
 ifneq ($(sdclang_already_warned),true)
 $(warning **********************************************)
@@ -32,3 +39,4 @@ include vendor/one/config/branding.mk
 include vendor/one/config/prop.mk
 include vendor/one/config/gapps.mk
 include packages/overlays/Themes/themes.mk
+
