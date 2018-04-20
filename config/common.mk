@@ -59,6 +59,18 @@ PRODUCT_PACKAGES += SoundRecorder
 # Build WallpaperPicker
 PRODUCT_PACKAGES += WallpaperPicker
 
+ifneq ($(HOST_OS),linux)
+ifneq ($(sdclang_already_warned),true)
+$(warning **********************************************)
+$(warning * SDCLANG is not supported on non-linux hosts.)
+$(warning **********************************************)
+sdclang_already_warned := true
+endif
+else
+# include definitions for SDCLANG
+include vendor/caf/sdclang/sdclang.mk
+endif
+
 #include vendor/caf/config/themes.mk
 include vendor/caf/config/bootanimation.mk
 #include vendor/caf/config/gapps.mk
