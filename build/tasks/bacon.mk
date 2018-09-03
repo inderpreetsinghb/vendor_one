@@ -20,7 +20,7 @@ TARGET_ROM_PACKAGE := $(PRODUCT_OUT)/CAF-$(CAF_TYPE)-$(CAF_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(TARGET_ROM_PACKAGE)
+	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(TARGET_ROM_PACKAGE)
 	$(hide) $(MD5SUM) $(TARGET_ROM_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(TARGET_ROM_PACKAGE).md5sum
 	@echo "Package Complete: $(TARGET_ROM_PACKAGE)" >&2
 	$(hide) bash vendor/caf/tools/json.sh
