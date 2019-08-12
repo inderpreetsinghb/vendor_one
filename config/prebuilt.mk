@@ -17,6 +17,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/permissions/privapp-one-permission.xml:system/etc/permissions/privapp-one-permission.xml
 
+# Sysconfig
+PRODUCT_COPY_FILES += \
+    vendor/one/prebuilt/common/etc/sysconfig/one-hiddenapi-whitelist.xml:system/etc/sysconfig/one-hiddenapi-whitelist.xml$
+
 # Scripts
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/init/one_updates.rc:system/etc/init/one_updates.rc

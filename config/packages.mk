@@ -11,6 +11,9 @@ PRODUCT_PACKAGES += \
     Updater \
     OnePapers
 
+# Build Longshot
+PRODUCT_PACKAGES += Longshot
+
 # Build sound recorder
 PRODUCT_PACKAGES += Recorder
 
