@@ -12,6 +12,9 @@ type Product_variables struct {
 	Supports_legacy_hw_fde struct {
 		Cflags []string
 	}
+	Target_init_vendor_lib struct {
+		Whole_static_libs []string
+	}
 	Target_shim_libs struct {
 		Cppflags []string
 	}
@@ -49,4 +52,5 @@ type ProductVariables struct {
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Supports_legacy_hw_fde  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
+	Target_init_vendor_lib  *string `json:",omitempty"`
 }
