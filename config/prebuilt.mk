@@ -1,3 +1,5 @@
+LOCAL_PATH := vendor/one
+
 # Include support for GApps backup
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -13,7 +15,7 @@ endif
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    vendor/one/prebuilt/common/etc/permissions/privapp-one-permission.xml:/system/etc/permissions/privapp-one-permission.xml
+    vendor/one/prebuilt/common/etc/permissions/privapp-one-permission.xml:system/etc/permissions/privapp-one-permission.xml
 
 # Scripts
 PRODUCT_COPY_FILES += \
@@ -22,11 +24,11 @@ PRODUCT_COPY_FILES += \
 # APNS
 PRODUCT_COPY_FILES += \
     vendor/one/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
-	
+
 # FONTS
 PRODUCT_COPY_FILES += \
-    vendor/one/prebuilt/common/fonts:system/fonts
-	
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/common/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)
+
 # Media
 PRODUCT_COPY_FILES += \
-    vendor/one/prebuilt/common/media:system/media
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/common/media,$(TARGET_COPY_OUT_PRODUCT)/media)

@@ -1,11 +1,11 @@
 # Build OneOS apps
 PRODUCT_PACKAGES += \
     Aurora \
-    Music \
+    OneMusic \
     SnapdragonGallery \
     messaging \
-    Calender \
-    Browser \
+    OneCalender \
+    OneBrowser \
     ThemePicker \
     FMRadio \
     Updater \
@@ -13,3 +13,5 @@ PRODUCT_PACKAGES += \
 
 # Build sound recorder
 PRODUCT_PACKAGES += Recorder	
+
+#include vendor/one/prebuilt/common/app/Android.mk

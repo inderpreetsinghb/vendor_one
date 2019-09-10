@@ -6,13 +6,13 @@ DISABLE_EAP_PROXY := true
 # Bootanimation
 PRODUCT_PACKAGES += \
     bootanimation.zip
-	
+
 # Custom off-mode charger
 PRODUCT_PACKAGES += \
     charger_res_images \
     one_charger_res_images \
     font_log.png \
-    libhealthd.one	
+    libhealthd.one
 
 ifneq ($(HOST_OS),linux)
 ifneq ($(sdclang_already_warned),true)
@@ -31,3 +31,4 @@ include vendor/one/config/packages.mk
 include vendor/one/config/branding.mk
 include vendor/one/config/prop.mk
 include vendor/one/config/gapps.mk
+include packages/overlays/Themes/themes.mk
