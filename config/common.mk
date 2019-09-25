@@ -47,13 +47,11 @@ DISABLE_EAP_PROXY := true
 
 # Build Snapdragon apps
 PRODUCT_PACKAGES += \
-    Aurora \
     Gallery \
     SnapdragonMusic  \
     CMFileManager \
     messaging \
-    LiveWallpapersPicker \
-    Updater
+    LiveWallpapersPicker
 
 # Build sound recorder
 PRODUCT_PACKAGES += SoundRecorder
@@ -61,6 +59,6 @@ PRODUCT_PACKAGES += SoundRecorder
 # Build WallpaperPicker
 PRODUCT_PACKAGES += WallpaperPicker
 
-include vendor/caf/config/themes.mk
+#include vendor/caf/config/themes.mk
 include vendor/caf/config/bootanimation.mk
-include vendor/caf/config/gapps.mk
+#include vendor/caf/config/gapps.mk
