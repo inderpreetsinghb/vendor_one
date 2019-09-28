@@ -17,7 +17,7 @@
 # -----------------------------------------------------------------
 # OneOS OTA update package
 
-TARGET_ROM_PACKAGE := $(PRODUCT_OUT)/OneOS-$(ONE_TYPE)-$(ONE_VERSION).zip
+TARGET_ROM_PACKAGE := $(PRODUCT_OUT)/OneOS$(ONE_TYPE)-$(ONE_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)

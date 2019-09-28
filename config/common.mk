@@ -15,7 +15,7 @@ ifeq ($(ONEOS_TYPE), BETA)
 endif
 
 ONE_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
-ONE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M)-$(CAF_DEVICE)ONEOS
+ONE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M)-$(CAF_DEVICE)TEAMONE
 
 # Include support for GApps backup
 PRODUCT_COPY_FILES += \
