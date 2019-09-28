@@ -61,6 +61,8 @@ PRODUCT_PACKAGES += SoundRecorder
 # Build WallpaperPicker
 PRODUCT_PACKAGES += WallpaperPicker
 
+
 include vendor/oneos/config/themes.mk
 include vendor/oneos/config/bootanimation.mk
 #include vendor/caf/config/gapps.mk
+
