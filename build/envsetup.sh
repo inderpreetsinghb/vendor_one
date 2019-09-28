@@ -35,7 +35,7 @@ function breakfast()
         if [ -z "$variant" ]; then
             variant="userdebug"
         fi
-        lunch caf_$target-$variant
+        lunch one_$target-$variant
     fi
     return $?
 }
@@ -58,7 +58,7 @@ function mka() {
         source $vendor_hal_script --check
         regen_needed=$?
     else
-        vendor_hal_script=$ANDROID_BUILD_TOP/vendor/caf/scripts/vendor_hal_makefile_generator.sh
+        vendor_hal_script=$ANDROID_BUILD_TOP/vendor/oneos/scripts/vendor_hal_makefile_generator.sh
         regen_needed=1
     fi
 

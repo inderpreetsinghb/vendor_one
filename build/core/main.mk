@@ -1,1 +1,1 @@
-include $(TOPDIR)vendor/caf/build/core/main_version.mk
+include $(TOPDIR)vendor/oneos/build/core/main_version.mk
