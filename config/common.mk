@@ -16,6 +16,7 @@ endif
 
 ONE_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 ONE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M)-$(CAF_DEVICE)TEAMONE
+ONE_BUILD := 1.0$(TARGET_PRODUCT)$(ONE_TYPE)
 
 # Include support for GApps backup
 PRODUCT_COPY_FILES += \
@@ -61,6 +62,10 @@ PRODUCT_PACKAGES += \
     one_charger_res_images \
     font_log.png \
     libhealthd.one
+
+# Long screenshot
+PRODUCT_PACKAGES += \
+    Longshot
 
 # Build sound recorder
 PRODUCT_PACKAGES += SoundRecorder
