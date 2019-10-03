@@ -21,4 +21,7 @@
     <!-- Should "LTE" be shown instead of "4G" when the network is NETWORK_TYPE_LTE? -->
     <bool name="config_show4GForLTE">false</bool>
 
+    <!-- Volte Icon -->
+    <bool name="config_display_volte">true</bool>
+
 </resources>
