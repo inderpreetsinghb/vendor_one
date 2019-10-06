@@ -295,7 +295,7 @@ void healthd_board_init(struct healthd_config*)
                     // chunk). We are using hard-coded frame.disp_time instead.
 
     rc = res_create_multi_display_surface("charger/one_battery_scale",
-            &scale_count, &scale_frames);
+            &scale_fps, &scale_count, &scale_frames);
     if (rc < 0) {
         LOGE("%s: Unable to load battery scale image", __func__);
         return;
