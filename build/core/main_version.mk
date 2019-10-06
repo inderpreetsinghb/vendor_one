@@ -1,3 +1,9 @@
+# Build fingerprint
+ifneq ($(BUILD_FINGERPRINT),)
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+endif
+
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.oneos.base.version=$(ONE_VERSION) \
     ro.oneos.releasetype=$(ONE_TYPE)	\
