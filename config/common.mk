@@ -51,7 +51,6 @@ PRODUCT_PACKAGES += \
     Aurora \
     Gallery \
     SnapdragonMusic  \
-    CMFileManager \
     messaging \
     LiveWallpapersPicker \
     Updater
@@ -68,7 +67,7 @@ PRODUCT_PACKAGES += \
     Longshot
 
 # Build sound recorder
-PRODUCT_PACKAGES += SoundRecorder
+PRODUCT_PACKAGES += Recorder
 
 # Build WallpaperPicker
 PRODUCT_PACKAGES += WallpaperPicker
@@ -77,4 +76,67 @@ PRODUCT_PACKAGES += WallpaperPicker
 include vendor/oneos/config/themes.mk
 include vendor/oneos/config/bootanimation.mk
 #include vendor/caf/config/gapps.mk
+
+# Support Extra tools
+PRODUCT_PACKAGES += \
+    7z \
+    awk \
+    bash \
+    bzip2 \
+    curl \
+    getcap \
+    htop \
+    lib7z \
+    libsepol \
+    pigz \
+    powertop \
+    setcap \
+    unrar \
+    unzip \
+    vim \
+    wget \
+    zip
+
+# Filesystems tools
+PRODUCT_PACKAGES += \
+    fsck.exfat \
+    fsck.ntfs \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+
+# Storage manager
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.storage_manager.enabled=true
+
+# Media
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    media.recorder.show_manufacturer_and_model=true
+
+# These packages are excluded from user builds
+PRODUCT_PACKAGES_DEBUG += \
+    micro_bench \
+    procmem \
+    procrank \
+    strace
+
+# TWRP
+#ifeq ($(WITH_TWRP),true)
+#include vendor/oneos/config/twrp.mk
+#endif
 
