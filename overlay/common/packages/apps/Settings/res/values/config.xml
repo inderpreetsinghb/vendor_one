@@ -27,6 +27,8 @@
     <string name="config_wallpaper_picker_package" translatable="false">com.google.android.apps.wallpaper</string>
     <string name="config_wallpaper_picker_class" translatable="false">com.google.android.apps.wallpaper.picker.CategoryPickerActivity</string>
 
+    <bool name="config_show_avatar_in_homepage">true</bool>
+
     <!-- Extras -->
     <string name="config_styles_and_wallpaper_picker_class">com.android.customization.picker.CustomizationPickerActivity</string>
     <string name="config_emergency_intent_action">com.google.android.safetyhub.SAFETY_HUB</string>
@@ -34,7 +36,6 @@
     <string name="config_settingsintelligence_log_action">com.google.android.settings.intelligence.contextualcards.CARD_INTERACTION_RECEIVER</string>
     <string name="config_settingsintelligence_package_name">com.google.android.settings.intelligence</string>
     <bool name="config_use_legacy_suggestion">false</bool>
-    <bool name="config_show_avatar_in_homepage">true</bool>
     <bool name="config_has_help">true</bool>
 
     <!-- Help -->

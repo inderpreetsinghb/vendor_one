@@ -1,4 +1,5 @@
 DEVICE_PACKAGE_OVERLAYS += vendor/oneos/overlay/common
+$(call inherit-product, vendor/oneos/config.mk)
 
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
@@ -7,15 +8,17 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
 endif
 
 #OneOS_TYPE ?= ALPHA
-ifndef ONEOS_TYPE
-    ONEOS_TYPE := STABLE
+ifndef ONE_TYPE
+    ONE_TYPE := ALPHA
 endif
 
-ifeq ($(ONEOS_TYPE), BETA)
+ifeq ($(ONE_TYPE), BETA)
 endif
 
-ONE_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
-ONE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M)-$(ONE_DEVICE)TEAMONE
+ONE_RELEASE := 2.0-$(ONE_TYPE)
+ONE_DEVICE := $(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+ONE_VERSION := $(ONE_RELEASE)-$(shell date +%Y%m%d-%H%M)-$(ONE_DEVICE)
+OVE_FINGERPRINT := ONE-$(ONE_VERSION)
 
 # Include support for GApps backup
 PRODUCT_COPY_FILES += \
@@ -51,7 +54,10 @@ PRODUCT_PACKAGES += \
     SnapdragonMusic  \
     CMFileManager \
     messaging \
+    ThemePicker \
+    PixelThemes \
     LiveWallpapersPicker
+
 
 # Custom off-mode charger
 PRODUCT_PACKAGES += \
@@ -67,6 +73,6 @@ PRODUCT_PACKAGES += SoundRecorder
 PRODUCT_PACKAGES += WallpaperPicker
 
 include vendor/oneos/config/themes.mk
-include vendor/oneos/config/bootanimation.mk
+include vendor/oneos/bootanimation/bootanimation.mk
 
 #include vendor/caf/config/gapps.mk

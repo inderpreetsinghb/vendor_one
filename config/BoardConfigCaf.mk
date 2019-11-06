@@ -1,5 +1,5 @@
 # Kernel
-include vendor/caf/config/BoardConfigKernel.mk
+include vendor/oneos/config/BoardConfigKernel.mk
 
 # Soong
-include vendor/caf/config/BoardConfigSoong.mk
+include vendor/oneos/config/BoardConfigSoong.mk
