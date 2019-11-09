@@ -8,7 +8,7 @@ endif
 
 #OneOS_TYPE ?= ALPHA
 ifndef ONEOS_TYPE
-    ONEOS_TYPE := STABLE
+    ONEOS_TYPE := ALPHA
 endif
 
 ifeq ($(ONEOS_TYPE), BETA)
