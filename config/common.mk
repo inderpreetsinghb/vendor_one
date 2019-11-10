@@ -50,12 +50,15 @@ DISABLE_EAP_PROXY := true
 
 # Build Snapdragon apps
 PRODUCT_PACKAGES += \
+    Music \
     Gallery \
-    SnapdragonMusic  \
     CMFileManager \
     messaging \
+    EmergencyInfoGoogleNoUi \
+    Calender \
     ThemePicker \
     PixelThemes \
+    Updater \
     LiveWallpapersPicker
 
 
@@ -67,7 +70,7 @@ PRODUCT_PACKAGES += \
     libhealthd.one
 
 # Build sound recorder
-PRODUCT_PACKAGES += SoundRecorder
+PRODUCT_PACKAGES += Recorder
 
 # Build WallpaperPicker
 PRODUCT_PACKAGES += WallpaperPicker
