@@ -45,6 +45,10 @@ PRODUCT_COPY_FILES += \
 # Disable qmi EAP-SIM security
 DISABLE_EAP_PROXY := true
 
+# Bootanimation
+PRODUCT_PACKAGES += \
+    bootanimation
+
 # Build Snapdragon apps
 PRODUCT_PACKAGES += \
     Gallery \
@@ -72,5 +76,4 @@ include vendor/caf/sdclang/sdclang.mk
 endif
 
 #include vendor/caf/config/themes.mk
-include vendor/caf/config/bootanimation.mk
 #include vendor/caf/config/gapps.mk
