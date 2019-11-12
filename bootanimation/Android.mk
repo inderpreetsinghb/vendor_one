@@ -17,11 +17,11 @@
 
 ifeq ($(TARGET_SCREEN_WIDTH),)
     $(warning TARGET_SCREEN_WIDTH is not set, using default value: 1080)
-    TARGET_SCREEN_WIDTH := 1080
+    TARGET_SCREEN_WIDTH := 720
 endif
 ifeq ($(TARGET_SCREEN_HEIGHT),)
     $(warning TARGET_SCREEN_HEIGHT is not set, using default value: 1920)
-    TARGET_SCREEN_HEIGHT := 1920
+    TARGET_SCREEN_HEIGHT := 1280
 endif
 
 TARGET_GENERATED_BOOTANIMATION := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION/bootanimation.zip
@@ -43,7 +43,7 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	fi; \
 	IMAGEHEIGHT=$$(expr $$IMAGEWIDTH / 3); \
 	RESOLUTION="$$IMAGEWIDTH"x"$$IMAGEHEIGHT"; \
-	for part_cnt in 0 1 2 3 4; do \
+	for part_cnt in 0 1 2; do \
 	    mkdir -p $(INTERMEDIATES)/part$$part_cnt; \
 	done; \
 	prebuilts/tools-lineage/${HOST_OS}-x86/bin/mogrify -resize $$RESOLUTION -colors 250 $(INTERMEDIATES)/*/*.png; \
