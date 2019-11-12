@@ -57,6 +57,7 @@ PRODUCT_PACKAGES += \
     messaging \
     EmergencyInfoGoogleNoUi \
     Calender \
+    Browser \
     ThemePicker \
     PixelThemes \
     Updater \
