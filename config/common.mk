@@ -50,6 +50,7 @@ DISABLE_EAP_PROXY := true
 
 # Build Snapdragon apps
 PRODUCT_PACKAGES += \
+    Aurora \
     Music \
     Gallery \
     CMFileManager \
