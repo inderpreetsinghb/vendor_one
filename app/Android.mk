@@ -55,6 +55,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := Browser
 LOCAL_MODULE_TAGS := optional
+LOCAL_OVERRIDES_PACKAGES := Browser2 QuickSearchBox
 LOCAL_SRC_FILES := Browser/Browser.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_CLASS := APPS

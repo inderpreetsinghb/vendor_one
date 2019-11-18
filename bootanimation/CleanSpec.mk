@@ -1,6 +1,5 @@
-# Copyright (C) 2017 Unlegacy-Android
+#
 # Copyright (C) 2017 The LineageOS Project
-# Copyright (C) 2019 OneOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,15 +12,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# -----------------------------------------------------------------
-# OneOS OTA update package
-
-TARGET_ROM_PACKAGE := $(PRODUCT_OUT)/OneOS-$(ONE_VERSION).zip
-
-.PHONY: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(TARGET_ROM_PACKAGE)
-	$(hide) $(MD5SUM) $(TARGET_ROM_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(TARGET_ROM_PACKAGE).md5sum
-	@echo "Package Complete: $(TARGET_ROM_PACKAGE)" >&2
-	$(hide) bash vendor/oneos/tools/json.sh
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/BOOTANIMATION)

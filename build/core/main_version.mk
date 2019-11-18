@@ -5,7 +5,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
 endif
 
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.oneos.base.version=$(ONE_VERSION) \
+    ro.oneos.base.version=$(ONE_RELEASE_VERSION) \
     ro.oneos.display.version=$(ONE_RELEASE) \
     ro.oneos.releasetype=$(ONE_TYPE)	\
     ro.oneos.version=$(ONE_RELEASE)

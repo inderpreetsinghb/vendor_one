@@ -17,8 +17,9 @@ endif
 
 ONE_RELEASE := 2.0-$(ONE_TYPE)
 ONE_DEVICE := $(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+ONE_RELEASE_VERSION := $(ONE_RELEASE)-$(BUILD_ID)-$(shell date +%s)
 ONE_VERSION := $(ONE_RELEASE)-$(shell date +%Y%m%d-%H%M)-$(ONE_DEVICE)
-OVE_FINGERPRINT := ONE-$(ONE_VERSION)
+ONE_FINGERPRINT := ONE-$(ONE_VERSION)
 
 # Include support for GApps backup
 PRODUCT_COPY_FILES += \
@@ -61,6 +62,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     PixelThemes \
     Updater \
+    OnePapers \
+    FMRadio \
     LiveWallpapersPicker
 
 
@@ -78,6 +81,9 @@ PRODUCT_PACKAGES += Recorder
 PRODUCT_PACKAGES += WallpaperPicker
 
 include vendor/oneos/config/themes.mk
-include vendor/oneos/bootanimation/bootanimation.mk
 
-#include vendor/caf/config/gapps.mk
+# Bootanimation
+PRODUCT_PACKAGES += \
+    bootanimation.zip
+
+include vendor/gapps/config.mk
