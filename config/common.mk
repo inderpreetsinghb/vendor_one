@@ -60,11 +60,9 @@ PRODUCT_PACKAGES += \
     Calender \
     Browser \
     ThemePicker \
-    PixelThemes \
     Updater \
     OnePapers \
-    FMRadio \
-    LiveWallpapersPicker
+#    LiveWallpapersPicker
 
 
 # Custom off-mode charger
@@ -78,7 +76,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += Recorder
 
 # Build WallpaperPicker
-PRODUCT_PACKAGES += WallpaperPicker
+#PRODUCT_PACKAGES += WallpaperPicker
 
 include vendor/oneos/config/themes.mk
 
@@ -86,4 +84,5 @@ include vendor/oneos/config/themes.mk
 PRODUCT_PACKAGES += \
     bootanimation.zip
 
-include vendor/gapps/config.mk
+#include vendor/gapps/config.mk
+include packages/overlay/Themes/themes.mk
