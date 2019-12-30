@@ -24,18 +24,21 @@ function breakfast()
 {
     target=$1
     local variant=$2
-    unset LUNCH_MENU_CHOICES
-    add_lunch_combo full-eng
-    echo "z$target" | grep -q "-"
-    if [ $? -eq 0 ]; then
-        # A buildtype was specified, assume a full device name
-        lunch $target
+    if [ $# -eq 0 ]; then
+        # No arguments, so let's have the full menu
+        lunch
     else
-        # This is probably just the PA model name
-        if [ -z "$variant" ]; then
-            variant="userdebug"
+        echo "z$target" | grep -q "-"
+        if [ $? -eq 0 ]; then
+            # A buildtype was specified, assume a full device name
+            lunch $target
+        else
+            # This is probably just the Lineage model name
+            if [ -z "$variant" ]; then
+                variant="userdebug"
+            fi
+            lunch one_$target-$variant
         fi
-        lunch one_$target-$variant
     fi
     return $?
 }
