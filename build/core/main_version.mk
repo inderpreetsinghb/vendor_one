@@ -9,3 +9,9 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.oneos.display.version=$(ONE_RELEASE) \
     ro.oneos.releasetype=$(ONE_TYPE)	\
     ro.oneos.version=$(ONE_RELEASE)
+
+# Set Correct API Level.....
+ifneq ($(ONE_API),)
+ADDITIONAL_BUILD_PROPERTIES += \
+     ro.build.api=$(ONE_API)
+endif
