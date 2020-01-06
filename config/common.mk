@@ -54,7 +54,7 @@ DISABLE_EAP_PROXY := true
 PRODUCT_PACKAGES += \
     Aurora \
     Music \
-    Gallery \
+    SnapdragonGallery \
     CMFileManager \
     messaging \
     EmergencyInfoGoogleNoUi \
