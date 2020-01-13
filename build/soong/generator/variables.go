@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func cafExpandVariables(ctx android.ModuleContext, in string) string {
-	cafVars := ctx.Config().VendorConfig("cafVarsPlugin")
+func oneExpandVariables(ctx android.ModuleContext, in string) string {
+	oneVars := ctx.Config().VendorConfig("oneVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if cafVars.IsSet(name) {
-			return cafVars.String(name), nil
+		if oneVars.IsSet(name) {
+			return oneVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand

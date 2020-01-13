@@ -1,4 +1,4 @@
-function __print_caf_functions_help() {
+function __print_one_functions_help() {
 cat <<EOF
 Additional CAF functions:
 - cout:            Changes directory to out.
@@ -24,18 +24,21 @@ function breakfast()
 {
     target=$1
     local variant=$2
-    unset LUNCH_MENU_CHOICES
-    add_lunch_combo full-eng
-    echo "z$target" | grep -q "-"
-    if [ $? -eq 0 ]; then
-        # A buildtype was specified, assume a full device name
-        lunch $target
+    if [ $# -eq 0 ]; then
+        # No arguments, so let's have the full menu
+        lunch
     else
-        # This is probably just the PA model name
-        if [ -z "$variant" ]; then
-            variant="userdebug"
+        echo "z$target" | grep -q "-"
+        if [ $? -eq 0 ]; then
+            # A buildtype was specified, assume a full device name
+            lunch $target
+        else
+            # This is probably just the Lineage model name
+            if [ -z "$variant" ]; then
+                variant="userdebug"
+            fi
+            lunch one_$target-$variant
         fi
-        lunch caf_$target-$variant
     fi
     return $?
 }
@@ -58,7 +61,7 @@ function mka() {
         source $vendor_hal_script --check
         regen_needed=$?
     else
-        vendor_hal_script=$ANDROID_BUILD_TOP/vendor/caf/scripts/vendor_hal_makefile_generator.sh
+        vendor_hal_script=$ANDROID_BUILD_TOP/vendor/oneos/scripts/vendor_hal_makefile_generator.sh
         regen_needed=1
     fi
 

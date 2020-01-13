@@ -1,4 +1,4 @@
-_json_contents := $(_json_contents)    "caf":{$(newline)
+_json_contents := $(_json_contents)    "one":{$(newline)
 
 # See build/core/soong_config.mk for the add_json_* functions you can use here.
 $(call add_json_str,  Target_shim_libs,                      $(TARGET_LD_SHIM_LIBS))

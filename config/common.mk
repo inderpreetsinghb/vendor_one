@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS += vendor/caf/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/one/overlay/common
 
 # Disable qmi EAP-SIM security
 DISABLE_EAP_PROXY := true
@@ -30,10 +30,10 @@ sdclang_already_warned := true
 endif
 else
 # include definitions for SDCLANG
-include vendor/caf/sdclang/sdclang.mk
+include vendor/one/sdclang/sdclang.mk
 endif
 
-include vendor/caf/config/prebuilt.mk
-include vendor/caf/config/branding.mk
-include vendor/caf/config/prop.mk
-include vendor/caf/config/gapps.mk
+include vendor/one/config/prebuilt.mk
+include vendor/one/config/branding.mk
+include vendor/one/config/prop.mk
+include vendor/one/config/gapps.mk
