@@ -5,7 +5,7 @@ DISABLE_EAP_PROXY := true
 
 # Bootanimation
 PRODUCT_PACKAGES += \
-    bootanimation
+    bootanimation.zip
 
 # Build Snapdragon apps
 PRODUCT_PACKAGES += \
