@@ -12,6 +12,11 @@ PRODUCT_PACKAGES += \
     OnePapers
 
 # Build sound recorder
-PRODUCT_PACKAGES += Recorder	
+PRODUCT_PACKAGES += Recorder
+
+# Override AOSP/CAF PACKAGES
+PRODUCT_PACKAGES += \
+    SafetyHubPrebuilt  \
+    SettingsIntelligenceGooglePrebuilt
 
 #include vendor/one/prebuilt/common/app/Android.mk
