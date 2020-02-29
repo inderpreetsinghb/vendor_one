@@ -45,4 +45,7 @@
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
 
+     <!-- Update column no to 4 -->
+    <integer name="quick_settings_num_columns">4</integer>
+
 </resources>
