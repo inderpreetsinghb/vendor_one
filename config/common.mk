@@ -25,6 +25,7 @@ else
 # include definitions for SDCLANG
 include vendor/one/sdclang/sdclang.mk
 endif
+
 include vendor/one/config/prebuilt.mk
 include vendor/one/config/packages.mk
 include vendor/one/config/branding.mk
