@@ -58,6 +58,5 @@ type ProductVariables struct {
 	Supports_legacy_hw_fde  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Target_init_vendor_lib  *string `json:",omitempty"`
-	Needs_text_relocations  *bool `json:",omitempty"`
 	Uses_qcom_bsp_legacy  *bool `json:",omitempty"`
 }
